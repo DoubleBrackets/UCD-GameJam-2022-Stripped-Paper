@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Player
+  - Terrain
+  - StaticTerrain
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 1822771785
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: StaticTerrain
+    uniqueID: 591834077
+    locked: 0
+  - name: Terrain
+    uniqueID: 28083525
+    locked: 0
+  - name: Player
+    uniqueID: 783586685
+    locked: 0
+  - name: Indicator
+    uniqueID: 3904385973
+    locked: 0
+  - name: Overlay
+    uniqueID: 2317802003
+    locked: 0

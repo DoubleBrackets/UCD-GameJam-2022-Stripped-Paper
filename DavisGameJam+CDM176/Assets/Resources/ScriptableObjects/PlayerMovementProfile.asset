@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36749622b99b5dc45b08baab18f1e3a1, type: 3}
+  m_Name: PlayerMovementProfile
+  m_EditorClassIdentifier: 
+  movementSpeed: 5
+  rotateSpeed: 45
+  groundedAccel: 40
+  groundedFrictionAccel: 30
+  airAccel: 25
+  airFriction: 10
+  jumpHeight: 2
+  rotateToGroundRatio: 0.35
+  maxPlayerRotation: 35
+  layerSwitchDuration: 0.93
+  minGroundedDot: 0.7
+  groundedCheckDistance: 0.25
+  groundedSnapDistance: 0.5
+  groundedSnapMaxAngle: 70
