@@ -41,7 +41,7 @@ public class ColliderLayerObject : BaseLayerObject
         for (int i = 0; i < hitCount; i++)
         {
             var player = hits[i].gameObject.GetComponentInParent<PlayerStateController>();
-            if (player != null)
+            if (player != null && objectCollider.OverlapPoint(hits[i].bounds.center))
             {
                 player.KillPlayer();
             }

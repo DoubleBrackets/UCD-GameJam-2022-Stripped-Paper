@@ -16,9 +16,19 @@ public class GameLayerManager : MonoBehaviour
         set => layerEvents = value;
     }
 
+    [SerializeField]
     private int currentTopLayer;
 
-    public int CurrentTopLayer => currentTopLayer;
+    public int CurrentTopLayer
+    {
+        get => currentTopLayer;
+        private set
+        {
+            currentTopLayer = value;
+            int count = GetPopulatedLayerCount();
+            FMODParameterManager.instance.SetParameter("Layers", GetLayerRatio(currentTopLayer));
+        }
+    }
 
     private void Awake()
     {
@@ -40,34 +50,41 @@ public class GameLayerManager : MonoBehaviour
         layerEvents[layerIndex].InvokeUnstripLayer?.Invoke();
     }
 
-    [ContextMenu("Strip top layer")]
     public bool StripTopLayer()
     {
         if (currentTopLayer > layerEvents.Count - 1)
             return false;
         StripLayer(currentTopLayer);
-        currentTopLayer++;
+        CurrentTopLayer++;
         if (!HasListeners(currentTopLayer-1))
-            return StripTopLayer();
+        {
+            bool found = StripTopLayer();
+            if (!found)
+                CurrentTopLayer--;
+            return found;
+        }
         return true;
     }
 
-    [ContextMenu("Unstrip top layer")]
     public bool UnstripTopLayer()
     {
         if (currentTopLayer <= 0)
             return false;
         UnstripLayer(currentTopLayer - 1);
-        currentTopLayer--;
+        CurrentTopLayer--;
         if (!HasListeners(currentTopLayer))
-            return UnstripTopLayer();
+        {
+            bool found = UnstripTopLayer();
+            if (!found)
+                CurrentTopLayer++;
+            return found;
+        }
         return true;
     }
 
-    [ContextMenu("Reset")]
     public void ResetLayerManager()
     {
-        currentTopLayer = 0;
+        CurrentTopLayer = 0;
     }
 
     public LayerInfo GetLayerInfo(int index)
@@ -89,6 +106,36 @@ public class GameLayerManager : MonoBehaviour
         }
         return results;
     }
+
+    public int GetPopulatedLayerCount()
+    {
+        int c = 0;
+        for (int i = 0; i < layerEvents.Count; i++)
+        {
+            if (HasListeners(i))
+                c++;
+        }
+        return c;
+    }
+
+    private float GetLayerRatio(int toplayer)
+    {
+        int count = 0;
+        int currentCount = 0;
+        for (int i = 0; i < layerEvents.Count; i++)
+        {
+            if(HasListeners(i))
+            {
+                if (toplayer > i)
+                {
+                    currentCount++;
+                }
+                count++;
+            }
+        }
+        return count == 0 ? 0 : 1 - (currentCount / (float)count);
+    }
+
 
     public void UnloadLayerObjects()
     {

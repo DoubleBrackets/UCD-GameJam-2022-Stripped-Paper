@@ -10,6 +10,7 @@ public class SpriteLayerObject : BaseLayerObject
     private float duration = 1f;
     private bool isInTransition = false;
     private float curveCenter;
+    public bool rotateWhenFlipping = false;
 
     MaterialPropertyBlock propertyBlock;
 
@@ -17,6 +18,7 @@ public class SpriteLayerObject : BaseLayerObject
     {
         base.Start();
         spriteRen = GetComponentInChildren<SpriteRenderer>();
+        spriteRen.sortingOrder = -layerIndex;
         UpdateMaterial();
         spriteRen.color = layerColor;
     }
@@ -63,6 +65,8 @@ public class SpriteLayerObject : BaseLayerObject
     protected override void OnStripped()
     {
         if (corout != null) StopCoroutine(corout);
+        if(rotateWhenFlipping)
+            transform.rotation = Quaternion.identity;
         corout = StartCoroutine(StripAnimation());
     }
 
@@ -89,6 +93,8 @@ public class SpriteLayerObject : BaseLayerObject
     protected override void OnUnstripped()
     {
         if (corout != null) StopCoroutine(corout);
+        if (rotateWhenFlipping)
+            transform.rotation = Quaternion.identity;
         corout = StartCoroutine(UnstripAnimation());
     }
 

@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 1807747592618718327}
   - component: {fileID: 1807747592618718321}
   - component: {fileID: 1807747592618718326}
+  - component: {fileID: 8062858598750526747}
   m_Layer: 0
   m_Name: Portal
   m_TagString: Untagged
@@ -131,6 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e264dd3f4c4cca44adc965495d5e509, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paramMaxDistance: 8
 --- !u!61 &1807747592618718326
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -157,6 +159,36 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.8}
   m_EdgeRadius: 0
+--- !u!114 &8062858598750526747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807747592618718324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  EventReference:
+    Guid:
+      Data1: 820290382
+      Data2: 1236007462
+      Data3: -1984890692
+      Data4: -253508618
+    Path: event:/Portal
+  Event: 
+  PlayEvent: 5
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1807747593069419142
 GameObject:
   m_ObjectHideFlags: 0

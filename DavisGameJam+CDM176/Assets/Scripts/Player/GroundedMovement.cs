@@ -28,6 +28,11 @@ public class GroundedMovement : MonoBehaviour
         set;
     }
 
+    public GameObject floor
+    {
+        get;
+        private set;
+    }
 
     private void FixedUpdate()
     {
@@ -71,7 +76,8 @@ public class GroundedMovement : MonoBehaviour
                 && (Vector2.Dot(Vector2.up, hit.normal) >= profile.minGroundedDot))
             {
                 groundedNormal = hit.normal;
-                if(Vector3.Dot(groundedNormal, vel) >= 0f)
+                floor = hit.collider.gameObject;
+                if (Vector3.Dot(groundedNormal, vel) >= 0f)
                 {
                     Vector2 adjustedVel = vel.ProjectOntoLineNormal(groundedNormal).normalized * vel.magnitude;
                     rb.velocity = adjustedVel;
@@ -100,7 +106,10 @@ public class GroundedMovement : MonoBehaviour
                 float dot = Vector2.Dot(Vector2.up, hit.normal);
                 bool isValid = (dot >= profile.minGroundedDot);
                 if(isValid)
+                {
+                    floor = hit.collider.gameObject;
                     norms.Add(hit.normal);
+                }                
             }
         }
         if(norms.Count == 0)

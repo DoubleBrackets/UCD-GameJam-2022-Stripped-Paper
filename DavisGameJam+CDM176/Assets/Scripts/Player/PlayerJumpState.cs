@@ -10,6 +10,7 @@ public class PlayerJumpState : PlayerAbstractState
 
     public override void EnterState()
     {
+        context.audioManager.PlayOneShot(context.audioManager.jump);
         context.groundedMovement.snapToGroundBlock = 0.35f;
         context.rb.velocity = new Vector2(
             context.rb.velocity.x,

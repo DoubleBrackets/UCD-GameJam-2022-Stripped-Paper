@@ -196,8 +196,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3309c981db3863c44a88fcb408357180, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upper: {x: 0.10850239, y: 0.75732183, z: 0}
-  dissolve: {x: -0.058807373, y: -1.2062951, z: 0}
+  upper: {x: 0.10850239, y: 0.34866858, z: 0}
+  dissolve: {x: 0.1674757, y: -0.9818957, z: 0}
+  rotateWhenFlipping: 0
 --- !u!61 &270013014
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -436,6 +437,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upper: {x: -0.1762824, y: 1.1289382, z: 0}
   dissolve: {x: -0.09351921, y: -0.9906795, z: 0}
+  rotateWhenFlipping: 1
 --- !u!212 &404818464
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -561,8 +563,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3309c981db3863c44a88fcb408357180, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upper: {x: 0.10850239, y: 0.75732183, z: 0}
-  dissolve: {x: -0.058807373, y: -1.2062951, z: 0}
+  upper: {x: 0.10850239, y: 0.39245272, z: 0}
+  dissolve: {x: 0.12754345, y: -1.0712194, z: 0}
+  rotateWhenFlipping: 0
 --- !u!61 &422082993
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -833,8 +836,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3309c981db3863c44a88fcb408357180, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upper: {x: -0.1762824, y: 2.142633, z: 0}
-  dissolve: {x: -0.54944277, y: -2.668376, z: 0}
+  upper: {x: -0.17628288, y: 1.1355944, z: 0}
+  dissolve: {x: -0.5494423, y: -1.9824224, z: 0}
+  rotateWhenFlipping: 0
 --- !u!61 &1293914789
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1023,8 +1027,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3309c981db3863c44a88fcb408357180, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upper: {x: 0.10850239, y: 0.75732183, z: 0}
-  dissolve: {x: -0.058807373, y: -1.2062951, z: 0}
+  upper: {x: 0.10850239, y: 0.39245296, z: 0}
+  dissolve: {x: 0.1275437, y: -1.0737877, z: 0}
+  rotateWhenFlipping: 0
 --- !u!61 &1310253012
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1180,6 +1185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upper: {x: -0.17628288, y: 1.0297956, z: 0}
   dissolve: {x: -0.09351921, y: -0.9563236, z: 0}
+  rotateWhenFlipping: 1
 --- !u!212 &1617290054
 SpriteRenderer:
   m_ObjectHideFlags: 0

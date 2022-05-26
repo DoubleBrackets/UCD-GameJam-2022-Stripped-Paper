@@ -187,7 +187,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 404818456}
   m_LocalRotation: {x: 0, y: 0, z: -0.1438381, w: 0.9896013}
-  m_LocalPosition: {x: -7.18, y: 4.78, z: 7.3194227}
+  m_LocalPosition: {x: -7.46, y: 4.78, z: 7.3194227}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -282,6 +282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upper: {x: -0.1762824, y: 1.1289382, z: 0}
   dissolve: {x: -0.09351921, y: -0.872586, z: 0}
+  rotateWhenFlipping: 1
 --- !u!212 &404818464
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -460,6 +461,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upper: {x: -0.17628193, y: 1.1289382, z: 0}
   dissolve: {x: -0.09351921, y: -0.9906795, z: 0}
+  rotateWhenFlipping: 1
 --- !u!212 &995635951
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -694,7 +696,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1310253007}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.14, y: 3.65, z: 7.3194227}
+  m_LocalPosition: {x: -7.42, y: 3.65, z: 7.3194227}
   m_LocalScale: {x: 4, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -740,6 +742,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upper: {x: 0.10850239, y: 0.5968499, z: 0}
   dissolve: {x: -0.058807373, y: -0.65610695, z: 0}
+  rotateWhenFlipping: 0
 --- !u!61 &1310253012
 BoxCollider2D:
   m_ObjectHideFlags: 0

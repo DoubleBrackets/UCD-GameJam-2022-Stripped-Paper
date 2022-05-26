@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 4840284271219071883}
   - component: {fileID: 4840284271219071880}
   - component: {fileID: 4840284271219071881}
-  - component: {fileID: 2044762315}
+  - component: {fileID: 4840284270768779803}
+  - component: {fileID: 4840284270768779807}
+  - component: {fileID: 1200835140}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -63,7 +65,7 @@ MonoBehaviour:
   player: {fileID: 0}
   levelData: {fileID: 11400000, guid: 977789197468ad243afb81db6067e9b7, type: 2}
   levelSceneOffset: 1
---- !u!114 &2044762315
+--- !u!114 &4840284270768779803
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -72,9 +74,67 @@ MonoBehaviour:
   m_GameObject: {fileID: 4840284271219071894}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f63b86c54f866e542ab2c087fa395d31, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  staticTerrainMask:
-    serializedVersion: 2
-    m_Bits: 256
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 17592054
+      Data2: 1331452011
+      Data3: 152172705
+      Data4: -701099070
+    Path: event:/Music
+  Event: 
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &4840284270768779807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4840284271219071894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -766741428
+      Data2: 1290300530
+      Data3: 787041921
+      Data4: 1650173936
+    Path: event:/BackgroundAmbient
+  Event: 
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1200835140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4840284271219071894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0600f40f640230641bada45c375a8dec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  busVolume: 2

@@ -11,6 +11,7 @@ public class PlayerStateController : MonoBehaviour
     public LayerIndicatorGenerator layerIndicatorGenerator;
     public Animator animator;
     public Transform spriteContainer;
+    public PlayerAudioManager audioManager;
 
 
     private PlayerAbstractState currentState;
@@ -70,6 +71,7 @@ public class PlayerStateController : MonoBehaviour
             {
                 if (GameLayerManager.instance.StripTopLayer())
                 {
+                    audioManager.PlayOneShot(audioManager.strip);
                     currentState.SwitchState(new PlayerLayerChangeState(this));
                 }
             }
@@ -77,6 +79,7 @@ public class PlayerStateController : MonoBehaviour
             {
                 if (GameLayerManager.instance.UnstripTopLayer())
                 {
+                    audioManager.PlayOneShot(audioManager.unstrip);
                     currentState.SwitchState(new PlayerLayerChangeState(this));
                 }
             }

@@ -1594,6 +1594,7 @@ MonoBehaviour:
   profile: {fileID: 11400000, guid: d8241506c73474e41a092dcfc9a4f3db, type: 2}
   rb: {fileID: 6723741748404551899}
   castReference: {fileID: 6723741748404551896}
+  isGrounded: 0
 --- !u!1 &6723741748404551897
 GameObject:
   m_ObjectHideFlags: 0
@@ -1605,9 +1606,10 @@ GameObject:
   - component: {fileID: 6723741748404551896}
   - component: {fileID: 6723741748404551899}
   - component: {fileID: 6723741748404551898}
+  - component: {fileID: 1950526085}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1670,6 +1672,47 @@ MonoBehaviour:
   layerIndicatorGenerator: {fileID: 6723741748265979365}
   animator: {fileID: 633244573}
   spriteContainer: {fileID: 1352975616888736740}
+  audioManager: {fileID: 1950526085}
+--- !u!114 &1950526085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6723741748404551897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41b1a2e7b934a724d977ade14096dcb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footStep:
+    Guid:
+      Data1: 1201177205
+      Data2: 1303829581
+      Data3: -390418815
+      Data4: -355257920
+    Path: event:/Footstep
+  jump:
+    Guid:
+      Data1: -438187395
+      Data2: 1303543627
+      Data3: 1645671346
+      Data4: 1757471429
+    Path: event:/Jump
+  strip:
+    Guid:
+      Data1: 381504564
+      Data2: 1304416420
+      Data3: -153480530
+      Data4: -465810903
+    Path: event:/Peel
+  unstrip:
+    Guid:
+      Data1: -124251306
+      Data2: 1283397137
+      Data3: -1167514984
+      Data4: 716360846
+    Path: event:/Unpeel
 --- !u!1 &6723741748933858045
 GameObject:
   m_ObjectHideFlags: 0
@@ -1680,6 +1723,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6723741748933858044}
   - component: {fileID: 633244573}
+  - component: {fileID: 1252682553}
   m_Layer: 0
   m_Name: SpriteManager
   m_TagString: Untagged
@@ -1731,6 +1775,36 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1252682553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6723741748933858045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94a7d797598b7284db5cf5f7c1b9f74b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundedMovement: {fileID: 6723741748367570371}
+  defaultStep:
+    Guid:
+      Data1: 1201177205
+      Data2: 1303829581
+      Data3: -390418815
+      Data4: -355257920
+    Path: event:/Footstep
+  paperStep:
+    Guid:
+      Data1: -264009601
+      Data2: 1315774473
+      Data3: -1220196465
+      Data4: -1410562743
+    Path: event:/PaperStep
+  paperMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &6723741749758239282
 GameObject:
   m_ObjectHideFlags: 0
@@ -1743,7 +1817,7 @@ GameObject:
   - component: {fileID: 5731177252843962214}
   m_Layer: 0
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

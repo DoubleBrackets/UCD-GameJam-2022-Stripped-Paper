@@ -317,7 +317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: 0, z: -10}
+  m_FollowOffset: {x: 0, y: 2, z: -10}
   m_XDamping: 1.5
   m_YDamping: 1.5
   m_ZDamping: 0
@@ -422,6 +422,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1200835139 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4840284271219071894, guid: 089315a07b5837046ad53bc7ba63ae49, type: 3}
+  m_PrefabInstance: {fileID: 4840284270768779801}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1200835146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200835139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31ca0b3be0c45c441843f479a1d9c3c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paramList:
+  - name: Layers
+    value: 0
+    targetValue: 0
+  - name: Distance
+    value: 0
+    targetValue: 0
 --- !u!1 &1274608424
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,7 +606,7 @@ MonoBehaviour:
     scrollSpeed: 2.4
     scale: 6.1
     alpha: 0.9
-    alphaPower: 2
+    alphaPower: 5.22
   - tex: {fileID: 2800000, guid: 64af6666fc51975419ed52b256d3e901, type: 3}
     ren: {fileID: 73945585}
     scrollSpeed: 3.5
@@ -690,6 +714,8 @@ GameObject:
   - component: {fileID: 1684072790}
   - component: {fileID: 1684072791}
   - component: {fileID: 1684072792}
+  - component: {fileID: 1684072794}
+  - component: {fileID: 1684072793}
   m_Layer: 0
   m_Name: Transition
   m_TagString: Untagged
@@ -777,6 +803,74 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c97bf9b4e9eed9445bc17fc0c975f796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitionIn:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1684072793}
+        m_TargetAssemblyTypeName: AudioOneShot, Assembly-CSharp
+        m_MethodName: PlayOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  transitionOut:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1684072794}
+        m_TargetAssemblyTypeName: AudioOneShot, Assembly-CSharp
+        m_MethodName: PlayOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1684072793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684072789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31049ae29bbe8734093bc520c8b532bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioEvent:
+    Guid:
+      Data1: -124251306
+      Data2: 1283397137
+      Data3: -1167514984
+      Data4: 716360846
+    Path: event:/Unpeel
+--- !u!114 &1684072794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684072789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31049ae29bbe8734093bc520c8b532bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioEvent:
+    Guid:
+      Data1: 381504564
+      Data2: 1304416420
+      Data3: -153480530
+      Data4: -465810903
+    Path: event:/Peel
 --- !u!1 &1781144305
 GameObject:
   m_ObjectHideFlags: 0
@@ -803,7 +897,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1781144305}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -840,7 +934,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.591615, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -935,7 +1029,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1880342501}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1361,8 +1455,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1950526083}
     - target: {fileID: 4840284271219071881, guid: 089315a07b5837046ad53bc7ba63ae49, type: 3}
-      propertyPath: startLevel
-      value: 0
+      propertyPath: levelSceneOffset
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4840284271219071883, guid: 089315a07b5837046ad53bc7ba63ae49, type: 3}
       propertyPath: m_RootOrder
@@ -1412,41 +1506,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: Managers
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2044762315, guid: 089315a07b5837046ad53bc7ba63ae49, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 089315a07b5837046ad53bc7ba63ae49, type: 3}
---- !u!1 &4840284270768779802 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4840284271219071894, guid: 089315a07b5837046ad53bc7ba63ae49, type: 3}
-  m_PrefabInstance: {fileID: 4840284270768779801}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &4840284270768779803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4840284270768779802}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: 17592054
-      Data2: 1331452011
-      Data3: 152172705
-      Data4: -701099070
-    Path: event:/Music
-  Event: 
-  PlayEvent: 1
-  StopEvent: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20

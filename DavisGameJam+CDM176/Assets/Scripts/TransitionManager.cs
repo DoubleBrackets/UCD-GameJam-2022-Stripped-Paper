@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
 public class TransitionManager : MonoBehaviour
 {
     public static TransitionManager instance;
     private SpriteRenderer spriteRen;
 
     private Camera main;
+
+    public UnityEvent transitionIn;
+    public UnityEvent transitionOut;
 
     private void Awake()
     {
@@ -37,6 +40,7 @@ public class TransitionManager : MonoBehaviour
 
     public Coroutine TransitionIn(float time)
     {
+        transitionIn?.Invoke();
         if (transitionCorout != null)
             StopCoroutine(transitionCorout);
         transitionCorout = StartCoroutine(StripAnimation(time));
@@ -64,7 +68,8 @@ public class TransitionManager : MonoBehaviour
     }
 
     public Coroutine TransitionOut(float time)
-    { 
+    {
+        transitionOut?.Invoke();
         if (transitionCorout != null)
             StopCoroutine(transitionCorout);
         transitionCorout = StartCoroutine(UnstripAnimation(time));
