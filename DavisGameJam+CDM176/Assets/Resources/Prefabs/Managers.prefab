@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4840284270768779803}
   - component: {fileID: 4840284270768779807}
   - component: {fileID: 1200835140}
+  - component: {fileID: 1200835146}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -49,6 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerData: {fileID: 11400000, guid: 9fcb069c3a8bdae4687ee9da2fe67934, type: 2}
+  currentTopLayer: 0
 --- !u!114 &4840284271219071881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,7 +66,7 @@ MonoBehaviour:
   startLevel: 0
   player: {fileID: 0}
   levelData: {fileID: 11400000, guid: 977789197468ad243afb81db6067e9b7, type: 2}
-  levelSceneOffset: 1
+  levelSceneOffset: 2
 --- !u!114 &4840284270768779803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,3 +140,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   busVolume: 2
+--- !u!114 &1200835146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4840284271219071894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31ca0b3be0c45c441843f479a1d9c3c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paramList:
+  - name: Layers
+    value: 0
+    targetValue: 0
+  - name: Distance
+    value: 0
+    targetValue: 0

@@ -422,30 +422,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1200835139 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4840284271219071894, guid: 089315a07b5837046ad53bc7ba63ae49, type: 3}
-  m_PrefabInstance: {fileID: 4840284270768779801}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1200835146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1200835139}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31ca0b3be0c45c441843f479a1d9c3c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paramList:
-  - name: Layers
-    value: 0
-    targetValue: 0
-  - name: Distance
-    value: 0
-    targetValue: 0
 --- !u!1 &1274608424
 GameObject:
   m_ObjectHideFlags: 0
@@ -780,7 +756,7 @@ SpriteRenderer:
   m_SortingLayerID: -1977165293
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: dd31892774a92204c86fbe9dc989790e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dd31892774a92204c86fbe9dc989790e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1454,10 +1430,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1950526083}
-    - target: {fileID: 4840284271219071881, guid: 089315a07b5837046ad53bc7ba63ae49, type: 3}
-      propertyPath: levelSceneOffset
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4840284271219071883, guid: 089315a07b5837046ad53bc7ba63ae49, type: 3}
       propertyPath: m_RootOrder
       value: 3

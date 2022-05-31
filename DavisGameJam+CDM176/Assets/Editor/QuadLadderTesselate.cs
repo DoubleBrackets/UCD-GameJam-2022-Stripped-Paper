@@ -12,8 +12,11 @@ public class QuadLadderTesselate : AssetPostprocessor
     {
         foreach(var sprite in sprites)
         {
-            //QuadTesselate(sprite);
-            //PerformLadderTesselation(sprite);
+            Debug.Log(sprite.name);
+            if(sprite.name.Contains("QuadTess"))
+                QuadTesselate(sprite);
+            if(sprite.name.Contains("LadderTess"))
+                PerformLadderTesselation(sprite);
         }
     }
 
